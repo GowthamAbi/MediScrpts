@@ -1,10 +1,18 @@
 import { createBrowserRouter } from 'react-router'
 import App from './App'
+import { Children } from 'react'
+import ClientRouter from './routes/ClientRouter.jsx'
 
 
   const routes=[{
-    path:'/',
-    element:<App/>
+    path:"/",
+    element:<App/>,
+    children:[
+      {
+        path:'',
+        element:<ClientRouter />
+      }
+    ]
 
   }]
 

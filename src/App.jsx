@@ -1,7 +1,13 @@
 import React from 'react'
+import Layout from './pages/Layout'
+import { Outlet } from 'react-router'
 
 export default function App() {
   return (
-    <div>App</div>
+    <>
+    <Layout>
+      <Outlet />
+    </Layout>
+    </>
   )
 }
