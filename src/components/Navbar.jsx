@@ -8,7 +8,7 @@ export default function Navbar() {
 
     <header className="flex justify-between items-center px-6 py-4 text-black font-serif font-bold fixed top-0 w-full z-50 shadow-md bg-white p-4 ">
 
-      <a href="#" className='text-xl'>MediScripts</a>
+      <a href="/" className='text-xl'>MediScripts</a>
 
       {/* Large Devices */}
       <nav className='hidden md:flex space-x-6'>
