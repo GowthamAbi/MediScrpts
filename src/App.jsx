@@ -1,4 +1,5 @@
 
+import HomePage from './pages/HomePage.jsx'
 import Layout from './pages/Layout.jsx'
 import { Outlet } from 'react-router'
 

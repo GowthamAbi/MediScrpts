@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom'; 
 import App from './App.jsx';
 import HomePage from './pages/HomePage.jsx';
+import Inventory from './components/authentication/Inventory.jsx';
 
 const routes = [
   {
@@ -11,6 +12,10 @@ const routes = [
       {
         path: '',
         element: <HomePage />
+      },
+      {
+        path:'inventory',
+        element: <Inventory />
       }
     ]
   }

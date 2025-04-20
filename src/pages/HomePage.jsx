@@ -1,9 +1,34 @@
-const HomePage=()=>{
-    return(
-        <div>
-            <h1>Welcome to the Home Page</h1>
-            <p>This is the home page of our application.</p>
+
+
+const HomePage = () => {
+    const roll = [
+      { label: "Inventory", href: "/inventory"},
+      { label: "Admin", href: "/admin" },
+      { label: "Agent", href: "/agent" },
+      { label: "Customers", href: "/customers" }
+    ];
+  
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gray-100"> 
+        <h1 className="text-black text-8xl font-bold mb-6 text-center ">Welcome</h1>
+  
+          <div className="flex flex-col sm:flex-row sm-flex-wrap items-center justify-center gap-4 w-fullq max-w-md">
+          {roll.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              className="w-full sm:w-auto bg-white shadow-md px-6 py-3 text-center text-lg text-black font-medium rounded-md hover:bg-blue-100 transition-all duration-200"
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
-    )
-}
-export default HomePage
+      </div>
+    );
+  };
+  
+  export default HomePage;
+
+
+
+  
