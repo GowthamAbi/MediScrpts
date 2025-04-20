@@ -10,11 +10,11 @@ import Customer from './components/authentication/Customers.jsx';
 const routes = [
   {
     path: '/',
-    element: <App />,
+    element: <HomePage />,
     children: [
       {
         path: '',
-        element: <HomePage />
+        element:<App /> 
       },
       {
         path:'inventory',
