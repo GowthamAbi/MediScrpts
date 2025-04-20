@@ -1,6 +1,7 @@
-import React from 'react'
-import Layout from './pages/Layout'
+
+import Layout from './pages/Layout.jsx'
 import { Outlet } from 'react-router'
+
 
 export default function App() {
   return (
