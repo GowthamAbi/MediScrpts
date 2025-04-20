@@ -1,15 +1,25 @@
 
+import AdminHomePage from './pages/Admin/AdminHomePage.jsx'
+import { Route, Routes } from 'react-router'
 import HomePage from './pages/HomePage.jsx'
-import Layout from './pages/Layout.jsx'
-import { Outlet } from 'react-router'
+import AdminRegister from './pages/Admin/Authentication/AdminRegister.jsx'
+import AdminLogin from './pages/Admin/Authentication/AdminLogin.jsx'
 
 
 export default function App() {
   return (
     <>
-    <Layout>
-      <Outlet />
-    </Layout>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+
+      {/*Admin*/ }
+      <Route path="/adminhomepage" element={<AdminHomePage />} />
+      <Route path="/admin/register" element={<AdminRegister />} />
+      <Route path="/admin/signin" element={<AdminLogin/>} />
+
+
+    </Routes>
+
     </>
   )
 }

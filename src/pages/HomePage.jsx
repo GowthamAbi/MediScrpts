@@ -1,9 +1,11 @@
+import { Routes,Route } from "react-router";
+import AdminHomePage from "./Admin/AdminHomePage";
 
 
 const HomePage = () => {
     const roll = [
       { label: "Inventory", href: "/inventory"},
-      { label: "Admin", href: "/admin" },
+      { label: "Admin", href: "/adminhomepage" ,},
       { label: "Agent", href: "/agent" },
       { label: "Customers", href: "/customers" }
     ];
@@ -23,6 +25,8 @@ const HomePage = () => {
             </a>
           ))}
         </div>
+
+      
       </div>
     );
   };

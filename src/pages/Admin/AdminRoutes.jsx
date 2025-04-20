@@ -2,12 +2,13 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom'; 
 import App from './App.jsx';
 import HomePage from './pages/HomePage.jsx';
+import AdminHomePage from './AdminHomePage.jsx';
 
 
 const routes = [
   {
-    path: '/',
-    element: <HomePage />,
+    path: '/adminhomepage',
+    element: <AdminHomePage />,
     children: [
       {
         path: '',
@@ -17,7 +18,7 @@ const routes = [
   }
 ];
 
-const router = createBrowserRouter(routes, {
+const adminRoutes = createBrowserRouter(routes, {
   future: {
     v7_relativeSplatPath: true,
     v7_fetcherPersist: true,
@@ -27,4 +28,4 @@ const router = createBrowserRouter(routes, {
   }
 });
 
-export default router;
+export default adminRoutes;
