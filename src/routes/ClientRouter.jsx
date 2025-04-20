@@ -2,9 +2,9 @@ import { useEffect } from "react"
 import { toast } from "react-toastify"
 
 const ClientRouter =()=>{
-    useEffect(()=>{
+   /* useEffect(()=>{
         toast.success("Client Router Loaded")
-    },[])
+    },[])*/
    
     return(
         <div>

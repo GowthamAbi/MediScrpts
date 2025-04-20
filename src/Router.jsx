@@ -1,7 +1,7 @@
-import React from 'react'; // required if using JSX and not using new JSX transform
-import { createBrowserRouter } from 'react-router-dom'; // ✅ correct package
+import React from 'react'; 
+import { createBrowserRouter } from 'react-router-dom'; 
 import App from './App.jsx';
-import ClientRouter from './routes/ClientRouter.jsx';
+import HomePage from './pages/HomePage.jsx';
 
 const routes = [
   {
@@ -10,7 +10,7 @@ const routes = [
     children: [
       {
         path: '',
-        element: <ClientRouter />
+        element: <HomePage />
       }
     ]
   }
