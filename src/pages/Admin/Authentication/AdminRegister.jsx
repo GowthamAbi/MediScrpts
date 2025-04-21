@@ -1,4 +1,35 @@
+import { useState } from "react";
+
 const AdminRegister =()=>{
+    const [formData,setformData]=useState({
+        name:'',
+        dob:'',
+        phone:'',
+        email:'',
+        address:'',
+        companyName:'',
+        companyPhone:'',
+        companyEmail:'',
+        companyAddress:'',
+        gst:'',
+        companyWebsite:'',
+        password:'',
+        confirmPassword:''
+    })
+
+    const handleChange=async(e)=>{
+        setformData({...formData,[e.target.name]:e.target.value})
+    }
+
+    const handleSubmit=async(e)=>{
+        e.preventDefault();
+
+        if(formData.password!==formData.confirmPassword) {
+            alert("Password Not Matched")
+            return ;
+        }
+    }
+
     const regist=[
         { name: 'name', label: 'Name', type: 'text', placeholder: 'Enter Name', required: true },
         { name: 'dob', label: 'Date of Birth', type: 'date', placeholder: 'Enter DOB', required: true },
@@ -14,19 +45,29 @@ const AdminRegister =()=>{
         { name: 'password', label: 'Password', type: 'password', placeholder: 'Enter Password', required: true },
         { name: 'confirmPassword', label: 'Confirm Password', type: 'password', placeholder: 'Confirm Password', required: true },
       ];
-    const handleSubmit=(e)=>{
-        
-    }
+   
     return(
         <div className="bg-red-300 h-screen pt-20">
         <div className="flex flex-col items-center h-auto space-y-4 justify-center max-w-5xl  mx-auto  p-4 border rounded bg-slate-300">
             <h1 className="text-xl mb-4 font-serif font-bold">Registeration</h1>
             
-            <form className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center w-full">
+            <form onSubmit={handleSubmit()} className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center w-full">
             {regist.map((item,index)=>(
-                <div key={index} className="flex flex-cols  w-full" >
-                    <label form={}>{item.label}</label>
-                <input name={item.name} type={item.type} placeholder={item.placeholder} key={index} className="border p-2 rounded" />
+                <div key={index} className="flex flex-col" >
+                    <label htmlFor={item.name}>{item.label}
+                        {item.required&&<span className="text-red-800">*</span>}
+                    </label>
+                    
+                <input 
+                name={item.name} 
+                type={item.type} 
+                placeholder={item.placeholder} 
+                key={index} 
+                value={formData[item.name]}
+                onChange={handleChange()}
+                required={item.required}
+                className="border p-2 rounded" 
+                />
                 </div>
             ))}   
                 
