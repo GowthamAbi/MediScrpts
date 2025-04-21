@@ -1,33 +1,37 @@
 const AdminRegister =()=>{
     const regist=[
-        {name:'name' ,type:"text" ,placeholder:"Enter Name"  },
-        {name:'dob' ,type:"date" ,placeholder:"Enter DOB"  },
-        {name:'phone' ,type:"number" ,placeholder:"Enter Phone"  },
-        {name:'email' ,type:"email" ,placeholder:"Enter Email"  },
-        {name:'phone' ,type:"number" ,placeholder:"Enter Phone"  },
-        {name:'address' ,type:"text" ,placeholder:"Enter Address"  },
-        {name:'companyName' ,type:"text" ,placeholder:"Enter CompanyName"  },
-        {name:'companyPhone' ,type:"number" ,placeholder:"Enter CompanyPhone"  },
-        {name:'Companymail' ,type:"email" ,placeholder:"Enter CompanyEmail"  },
-        {name:'companyAddress' ,type:"text" ,placeholder:"Enter CompanyAddress"  },
-        {name:'gst' ,type:"text" ,placeholder:"Enter GST NO"  },
-        {name:'website' ,type:"text" ,placeholder:"Enter CompanyWebsite"  },
-        {name:'password' ,type:"text" ,placeholder:"Enter Password"  },
-        {name:'password' ,type:"text" ,placeholder:"Enter Conform Password"  }
-
-    ]
-
+        { name: 'name', label: 'Name', type: 'text', placeholder: 'Enter Name', required: true },
+        { name: 'dob', label: 'Date of Birth', type: 'date', placeholder: 'Enter DOB', required: true },
+        { name: 'phone', label: 'Phone', type: 'number', placeholder: 'Enter Phone', required: true },
+        { name: 'email', label: 'Email', type: 'email', placeholder: 'Enter Email', required: true },
+        { name: 'address', label: 'Address', type: 'text', placeholder: 'Enter Address', required: true },
+        { name: 'companyName', label: 'Company Name', type: 'text', placeholder: 'Enter Company Name', required: true },
+        { name: 'companyPhone', label: 'Company Phone', type: 'number', placeholder: 'Enter Company Phone', required: true },
+        { name: 'companyEmail', label: 'Company Email', type: 'email', placeholder: 'Enter Company Email', required: true },
+        { name: 'companyAddress', label: 'Company Address', type: 'text', placeholder: 'Enter Company Address', required: true },
+        { name: 'gst', label: 'GST No', type: 'text', placeholder: 'Enter GST No', required: false },
+        { name: 'companyWebsite', label: 'Company Website', type: 'text', placeholder: 'Enter Company Website', required: false },
+        { name: 'password', label: 'Password', type: 'password', placeholder: 'Enter Password', required: true },
+        { name: 'confirmPassword', label: 'Confirm Password', type: 'password', placeholder: 'Confirm Password', required: true },
+      ];
+    const handleSubmit=(e)=>{
+        
+    }
     return(
         <div className="bg-red-300 h-screen pt-20">
         <div className="flex flex-col items-center h-auto space-y-4 justify-center max-w-5xl  mx-auto  p-4 border rounded bg-slate-300">
             <h1 className="text-xl mb-4 font-serif font-bold">Registeration</h1>
+            
             <form className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center w-full">
             {regist.map((item,index)=>(
-                <input name={item.name} type={item.type} placeholder={item.placeholder} className="border p-2 rounded" />
+                <div key={index} className="flex flex-cols  w-full" >
+                    <label form={}>{item.label}</label>
+                <input name={item.name} type={item.type} placeholder={item.placeholder} key={index} className="border p-2 rounded" />
+                </div>
             ))}   
                 
             </form>
-            <button type="submit" className="bg-blue-600 px-8 py-4 rounded-xl font-serif text-xl font-bold text-white">Register</button>
+            <button type="submit" onClick={handleSubmit} className="bg-blue-600 px-8 py-4 rounded-xl font-serif text-xl font-bold text-white">Register</button>
         <div>
             
         </div>
