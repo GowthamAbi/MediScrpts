@@ -1,4 +1,5 @@
 import { useState } from "react";
+import api from "../../../services/authService";
 
 const AdminRegister =()=>{
     const [formData,setformData]=useState({
@@ -28,6 +29,15 @@ const AdminRegister =()=>{
             alert("Password Not Matched")
             return ;
         }
+
+        try{
+            const response=await api.post('/api/v1/auth/admin/register',formData)
+            console.log('Registration Success:', response.data);
+            alert('Registered successfully!');
+          } catch (err) {
+            console.error('Registration failed:', err);
+            alert('Registration failed. Check console for details.');
+          }
     }
 
     const regist=[
@@ -51,7 +61,7 @@ const AdminRegister =()=>{
         <div className="flex flex-col items-center h-auto space-y-4 justify-center max-w-5xl  mx-auto  p-4 border rounded bg-slate-300">
             <h1 className="text-xl mb-4 font-serif font-bold">Registeration</h1>
             
-            <form onSubmit={handleSubmit()} className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center w-full">
+            <form onSubmit={handleSubmit} className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center w-full">
             {regist.map((item,index)=>(
                 <div key={index} className="flex flex-col" >
                     <label htmlFor={item.name}>{item.label}
@@ -64,7 +74,7 @@ const AdminRegister =()=>{
                 placeholder={item.placeholder} 
                 key={index} 
                 value={formData[item.name]}
-                onChange={handleChange()}
+                onChange={handleChange}
                 required={item.required}
                 className="border p-2 rounded" 
                 />
