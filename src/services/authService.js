@@ -1,48 +1,42 @@
 import axios from "axios";
 
-const api=axios.create({
-    baseURL:'https://mediscrpts-bd.onrender.com',
-    headers:{
-        'Content-Type':'Application/Json'
-    }
-})
+// ✅ Create API instance
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json', // ⚠️ Case-sensitive
+  }
+});
 
-//api inceptors
-
+// ✅ Request interceptor
 api.interceptors.request.use(
-(config)=>{
-const token=localStorage.getItem("authToken")
-if(token)
-{
-    config.headers["Authorization"]=`Bearer${token}`
-}
-return config
-},
-(err)=>{
-    return Promise.reject(err)
-}
-
-)
-
-
-//api response
-
-api.interceptors.response.use(
-    (response)=>response,(error)=>{
-        if(err.response)
-        {
-            if(err.response.status==401)
-            {
-                console.log("UnAuthorization Please Login")
-                alert("UnAuthorization Please Login")
-
-                localStorage.removeItem('authToken')
-
-                window.location.href='/login'
-            }
-        }
-        return Promise.reject(err)
+  (config) => {
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      config.headers["Authorization"] = `Bearer ${token}`; // ✅ Add space after Bearer
     }
-    )
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
-    export default api
+// ✅ Response interceptor
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response) {
+      if (error.response.status === 401) {
+        console.log("Unauthorized - Please login again.");
+        alert("Unauthorized - Please login again.");
+
+        localStorage.removeItem('authToken');
+        window.location.href = '/admin/signin'; // Adjust path if needed
+      }
+    }
+    return Promise.reject(error);
+  }
+);
+
+export default api;
