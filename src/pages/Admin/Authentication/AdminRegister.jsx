@@ -34,6 +34,7 @@ const AdminRegister =()=>{
             const response=await api.post('/api/v1/auth/admin/register',formData)
             console.log('Registration Success:', response.data);
             alert('Registered successfully!');
+            navigator('/admin/login')
           } catch (err) {
             console.error('Registration failed:', err);
             alert('Registration failed. Check console for details.');
