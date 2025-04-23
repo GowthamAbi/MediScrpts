@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import api from "../../../services/authService";
 
 const AdminRegister =()=>{
+    const navigator=useNavigate()
+    
     const [formData,setformData]=useState({
         name:'',
         dob:'',

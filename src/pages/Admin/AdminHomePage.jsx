@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const AdminHomePage = () => {
   const auth = [
     { label: "Sign Up", href: "/admin/register" },
-    { label: "Sign In", href: "/admin/signin" },
+    { label: "Sign In", href: "/admin/login" },
   ];
 
   return (

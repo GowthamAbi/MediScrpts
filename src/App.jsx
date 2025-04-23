@@ -15,7 +15,7 @@ export default function App() {
       {/*Admin*/ }
       <Route path="/adminhomepage" element={<AdminHomePage />} />
       <Route path="/admin/register" element={<AdminRegister />} />
-      <Route path="/admin/signin" element={<AdminLogin/>} />
+      <Route path="/admin/login" element={<AdminLogin/>} />
 
 
     </Routes>

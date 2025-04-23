@@ -2,7 +2,7 @@ import axios from "axios";
 
 // ✅ Create API instance
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: 'https://mediscrpts-bd.onrender.com',
   headers: {
     'Content-Type': 'application/json', // ⚠️ Case-sensitive
   }

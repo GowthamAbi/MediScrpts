@@ -9,15 +9,17 @@ export default function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await api.post('/api/v1/auth/admin/login', { email, password });
-
+    try{
+      const response=await api.post('/api/v1/auth/admin/login', { email, password })
       console.log('Login Success:', response.data);
-      alert('Login successfully!');
-    } catch (err) {
-      console.log("Login error:", err);
-      alert('Login failed. Please check credentials.');
+     
     }
+    catch(err){
+      console.error('Login failed:', err);
+      alert('Login failed. Check console for details.');
+    }
+
+    
   }
 
   return (
