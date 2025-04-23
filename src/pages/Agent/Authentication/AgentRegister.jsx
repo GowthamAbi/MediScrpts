@@ -58,6 +58,7 @@ const AgentRegister =()=>{
         { name: 'companyWebsite', label: 'Company Website', type: 'text', placeholder: 'Enter Company Website', required: false },
         { name: 'password', label: 'Password', type: 'password', placeholder: 'Enter Password', required: true },
         { name: 'confirmPassword', label: 'Confirm Password', type: 'password', placeholder: 'Confirm Password', required: true },
+        
       ];
    
     return(

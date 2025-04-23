@@ -11,12 +11,6 @@ const CustomerRegister =()=>{
         phone:'',
         email:'',
         address:'',
-        companyName:'',
-        companyPhone:'',
-        companyEmail:'',
-        companyAddress:'',
-        gst:'',
-        companyWebsite:'',
         password:'',
         confirmPassword:''
     })
@@ -50,12 +44,6 @@ const CustomerRegister =()=>{
         { name: 'phone', label: 'Phone', type: 'number', placeholder: 'Enter Phone', required: true },
         { name: 'email', label: 'Email', type: 'email', placeholder: 'Enter Email', required: true },
         { name: 'address', label: 'Address', type: 'text', placeholder: 'Enter Address', required: true },
-        { name: 'companyName', label: 'Company Name', type: 'text', placeholder: 'Enter Company Name', required: true },
-        { name: 'companyPhone', label: 'Company Phone', type: 'number', placeholder: 'Enter Company Phone', required: true },
-        { name: 'companyEmail', label: 'Company Email', type: 'email', placeholder: 'Enter Company Email', required: true },
-        { name: 'companyAddress', label: 'Company Address', type: 'text', placeholder: 'Enter Company Address', required: true },
-        { name: 'gst', label: 'GST No', type: 'text', placeholder: 'Enter GST No', required: false },
-        { name: 'companyWebsite', label: 'Company Website', type: 'text', placeholder: 'Enter Company Website', required: false },
         { name: 'password', label: 'Password', type: 'password', placeholder: 'Enter Password', required: true },
         { name: 'confirmPassword', label: 'Confirm Password', type: 'password', placeholder: 'Confirm Password', required: true },
       ];
