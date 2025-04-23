@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import api from "../../../services/authService";
 
-const AdminRegister =()=>{
+const AgentRegister =()=>{
     const navigator=useNavigate()
 
     const [formData,setformData]=useState({
@@ -91,7 +91,7 @@ const AdminRegister =()=>{
             
         </div>
         <div className="flex flex-col items-center justify-center mt-4">
-            <p className="text-black">Already have an account? <a href="/admin/login" className="text-blue-600 hover:text-blue-800">Login</a></p>
+            <p className="text-black">Already have an account? <a href="/agent/login" className="text-blue-600 hover:text-blue-800">Login</a></p>
             
         </div>
         </div>
@@ -100,4 +100,4 @@ const AdminRegister =()=>{
     )
 }
 
-export default AdminRegister;
+export default AgentRegister;

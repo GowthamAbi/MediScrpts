@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import api from '../../../services/authService';
 import { useNavigate } from 'react-router-dom';
 
-export default function AdminLogin() {
+export default function CustomerLogin() {
   const navigate = useNavigate()
 
   const [email, setEmail] = useState("")
@@ -12,9 +12,9 @@ export default function AdminLogin() {
     e.preventDefault();
 
     try{
-      const response=await api.post('/api/v1/auth/admin/login', { email, password })
+      const response=await api.post('/api/v1/auth/login', { email, password })
       console.log('Login Success:', response.data);
-      navigate('/admin/dashboard')
+      navigate('/dashboard')
 
      
     }
@@ -66,7 +66,7 @@ export default function AdminLogin() {
         </form>
         {/* Form Ends */}
         <div className="flex flex-col items-center justify-center mt-4">
-            <p className="text-black">You Dont have an account? <a href="/admin/register" className="text-white hover:text-blue-800">Login</a></p>
+            <p className="text-black">You Dont have an account? <a href="/register" className="text-white hover:text-blue-800">Register</a></p>
             
         </div>
       </div>

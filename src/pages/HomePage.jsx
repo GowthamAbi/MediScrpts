@@ -4,10 +4,10 @@ import AdminHomePage from "./Admin/AdminHomePage";
 
 const HomePage = () => {
     const roll = [
-      { label: "Inventory", href: "/inventory"},
+      { label: "Inventory", href: "/inventoryhompage"},
       { label: "Admin", href: "/adminhomepage" ,},
-      { label: "Agent", href: "/agent" },
-      { label: "Customers", href: "/customers" }
+      { label: "Agent", href: "/agent/homepage" },
+      { label: "Customers", href: "/homepage" }
     ];
   
     return (
