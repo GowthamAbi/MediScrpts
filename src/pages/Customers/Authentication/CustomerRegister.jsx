@@ -31,7 +31,7 @@ const CustomerRegister =()=>{
             const response=await api.post('/api/v1/auth/register',formData)
             console.log('Registration Success:', response.data);
             alert('Registered successfully!');
-            navigator('/login')
+            navigator('/api/v1/auth/login')
           } catch (err) {
             console.error('Registration failed:', err);
             alert('Registration failed. Check console for details.');

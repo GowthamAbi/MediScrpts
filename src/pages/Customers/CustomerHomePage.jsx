@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 const CustomerHomePage = () => {
   const auth = [
-    { label: "Sign Up", href: "/register" },
-    { label: "Sign In", href: "/login" },
+    { label: "Sign Up", href: "/api/v1/auth/register" },
+    { label: "Sign In", href: "/api/v1/auth/login" },
   ];
 
   return (

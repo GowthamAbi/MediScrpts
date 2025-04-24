@@ -34,7 +34,7 @@ const InventoryRegister =()=>{
             const response=await api.post('/api/v1/auth/inventory/register',formData)
             console.log('Registration Success:', response.data);
             alert('Registered successfully!');
-            navigator('/inventory/login')
+            navigator('/api/v1/auth/inventory/login')
           } catch (err) {
             console.error('Registration failed:', err);
             alert('Registration failed. Check console for details.');

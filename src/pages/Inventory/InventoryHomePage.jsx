@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 const InventoryHomePage = () => {
   const auth = [
-    { label: "Sign Up", href: "/inventory/register" },
-    { label: "Sign In", href: "/inventory/login" },
+    { label: "Sign Up", href: "/api/v1/auth/inventory/register" },
+    { label: "Sign In", href: "/api/v1/auth/inventory/login" },
   ];
 
   return (

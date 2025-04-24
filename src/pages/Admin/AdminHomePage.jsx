@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 const AdminHomePage = () => {
   const auth = [
-    { label: "Sign Up", href: "/admin/register" },
-    { label: "Sign In", href: "/admin/login" },
+    { label: "Sign Up", href: "/api/v1/auth/admin/register" },
+    { label: "Sign In", href: "/api/v1/auth/admin/login" },
   ];
 
   return (

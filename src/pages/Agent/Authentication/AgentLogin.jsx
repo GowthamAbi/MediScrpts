@@ -14,7 +14,7 @@ export default function AgentLogin() {
     try{
       const response=await api.post('/api/v1/auth/agent/login', { email, password })
       console.log('Login Success:', response.data);
-      navigate('/agent/dashboard')
+      navigate('/api/v1/auth/agent/dashboard')
 
      
     }

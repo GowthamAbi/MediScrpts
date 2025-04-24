@@ -27,28 +27,28 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
 
       {/*Admin*/ }
-      <Route path="/adminhomepage" element={<AdminHomePage />} />
-      <Route path="/admin/register" element={<AdminRegister />} />
-      <Route path="/admin/login" element={<AdminLogin/>} />
-      <Route path="/admin/dashboard" element={<AdminDashboard/>} />
+      <Route path="/api/v1/auth/adminhomepage" element={<AdminHomePage />} />
+      <Route path="/api/v1/auth/admin/register" element={<AdminRegister />} />
+      <Route path="/api/v1/auth/admin/login" element={<AdminLogin/>} />
+      <Route path="/api/v1/auth/admin/dashboard" element={<AdminDashboard/>} />
 
       {/*Agent*/ }
-      <Route path="/agent/homepage" element={<AgentHomePage/>} />
-        <Route path="/agent/register" element={<AgentRegister />} />
-        <Route path="/agent/login" element={<AgentLogin />} />
-        <Route path="/agent/dashboard" element={<AgentDashboard />} />
+      <Route path="/api/v1/auth/agent/homepage" element={<AgentHomePage/>} />
+        <Route path="/api/v1/auth/agent/register" element={<AgentRegister />} />
+        <Route path="/api/v1/auth/agent/login" element={<AgentLogin />} />
+        <Route path="/api/v1/auth/agent/dashboard" element={<AgentDashboard />} />
 
       {/*Customer*/ }
-       <Route path="/homepage" element={<CustomerHomePage />} /> 
-        <Route path="/register" element={<CustomerRegister />} /> 
-      <Route path="/login" element={<CustomerLogin/>} /> 
-       <Route path="/dashboard" element={<CustomerDashboard />} /> 
+       <Route path="/api/v1/auth/homepage" element={<CustomerHomePage />} /> 
+        <Route path="/api/v1/auth/register" element={<CustomerRegister />} /> 
+      <Route path="/api/v1/auth/login" element={<CustomerLogin/>} /> 
+       <Route path="/api/v1/auth/dashboard" element={<CustomerDashboard />} /> 
 
       {/*Inventory*/}
-      <Route path="/inventoryhompage" element={<InventoryHomePage />} />
-        <Route path="/inventory/register" element={<InventoryRegister />} />
-        <Route path="/inventory/login" element={<InventoryLogin/>} />
-        <Route path="/inventory/Dashboard" element={<InventoryDashboard/>} />
+      <Route path="/api/v1/auth/inventoryhompage" element={<InventoryHomePage />} />
+        <Route path="/api/v1/auth/inventory/register" element={<InventoryRegister />} />
+        <Route path="/api/v1/auth/inventory/login" element={<InventoryLogin/>} />
+        <Route path="/api/v1/auth/inventory/Dashboard" element={<InventoryDashboard/>} />
    
 
 

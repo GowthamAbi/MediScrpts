@@ -14,7 +14,7 @@ export default function AdminLogin() {
     try{
       const response=await api.post('/api/v1/auth/admin/login', { email, password })
       console.log('Login Success:', response.data);
-      navigate('/admin/dashboard')
+      navigate('/api/v1/auth/admin/dashboard')
 
      
     }

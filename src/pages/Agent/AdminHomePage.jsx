@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 const AgentHomePage = () => {
   const auth = [
-    { label: "Sign Up", href: "/agent/register" },
-    { label: "Sign In", href: "/agent/login" },
+    { label: "Sign Up", href: "/api/v1/auth/agent/register" },
+    { label: "Sign In", href: "/api/v1/auth/agent/login" },
   ];
 
   return (
